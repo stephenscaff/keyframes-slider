@@ -1,0 +1,110 @@
+/*----------------------------------------------   
+--Setup
+-----------------------------------------------  */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box; 
+  box-sizing: border-box; 
+}
+
+html {
+	font-size: 100%; 
+	width: 100%;
+	-webkit-text-size-adjust: 100%;
+	background-color:	$color-beta;
+}
+
+//Fade In Body
+body{
+		@include animation(fade-in ease-in-out 1.4s);
+}
+
+/*----------------------------------------------   
+--Banner
+-----------------------------------------------  */
+.sect-banner{
+	display:	table;
+	width:	100%;
+	margin:	0 auto;
+	text-align:	center;
+	height:	100vh;
+	color:	rgba(255,255,255,0.9);
+	@include overlay($color-beta, 0.4);
+	
+	.v-center{
+		display:	table-cell;
+		vertical-align:	middle;
+		position:	relative;
+		z-index:	4;
+		padding:	0 5%;
+		
+		h1{
+			@include animation(fade-in ease-in-out 2s 0.5s both);
+		}
+		
+		p{
+			font-size:	120%;
+			@include animation(fade-in ease-in-out 2s 1s both);
+		}
+	}
+
+
+/*----------------------------------------------   
+-DEMO1: Unordered list
+-----------------------------------------------  */
+ul.kf-slider{ 
+ li{ 	
+ 	@include bg-abs;
+  opacity:	0;
+  @include animation(fade-out 9s infinite both);
+ 	background-image:	url(../images/banner-1-sm.jpg);
+ 
+ 	@media (min-width: $mq-med){
+ 		background-image:	url(../images/banner-1.jpg);
+ 	}
+ }
+ li:nth-child(2){
+ 	background-image:	url(../images/banner-2-sm.jpg);
+ 	@include animation-delay(3s);
+ 	
+ 	@media (min-width: $mq-med){
+ 		background-image:	url(../images/banner-2.jpg);
+ 	}
+ }
+	li:nth-child(3){
+	background-image:	url(../images/banner-3-sm.jpg);
+		@include animation-delay(6s);
+		
+		@media (min-width: $mq-med){
+			background-image:	url(../images/banner-3.jpg);
+		}
+	}
+}
+
+	/*----------------------------------------------   
+	-DEMO2: Banner bg
+	-----------------------------------------------  */	
+	.banner-bg{
+		@include bg-abs;
+		background-image:	url(../images/banner-1-sm.jpg);
+		@include animation(slider-sm ease-in-out 30s both infinite);
+			
+		@media (min-width: $mq-med) {
+			background-image:	url(../images/banner-1.jpg);
+			@include animation(slider-lg ease-in-out 30s both infinite);
+		}
+	}
+}
+
+
+/*----------------------------------------------   
+-Footer
+-----------------------------------------------  */
+footer{
+	width:	100%;
+	text-align:	center;
+	color:	$color-light;
+	position:	fixed;	
+	z-index:	8;
+	bottom:	1em;
+}

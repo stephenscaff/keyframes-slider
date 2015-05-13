@@ -1,0 +1,60 @@
+/*----------------------------------------------   
+--Fade ins
+-----------------------------------------------  */
+@include keyframes(fade-in) {
+ 0%{
+   opacity: 0
+ }
+ 100%{
+   opacity: 1
+ }
+}
+
+/*----------------------------------------------   
+--Fade out for slider
+-----------------------------------------------  */
+@include keyframes(fade-out) {
+	 33%{
+	   opacity: 1
+	 }
+	 66%{
+	   opacity: 0
+	}
+}
+
+/*----------------------------------------------   
+--Keyframes Slider - Sm
+-----------------------------------------------  */
+@include keyframes(slider-sm) {
+ 0%{
+   background-image:	url(../images/banner-1-sm.jpg);
+ }
+ 33%{
+   background-image:	url(../images/banner-2-sm.jpg);
+ }
+ 66%{
+   background-image:	url(../images/banner-3-sm.jpg);
+ }
+ 100%{
+   background-image:	url(../images/banner-1-sm.jpg);
+ }
+}
+
+/*----------------------------------------------   
+--Keyframes Slider - Lg
+-----------------------------------------------  */
+@include keyframes(slider-lg) {
+ 0%{
+   background-image:	url(../images/banner-1.jpg);
+ }
+ 33%{
+   background-image:	url(../images/banner-2.jpg);
+ }
+ 66%{
+   background-image:	url(../images/banner-3.jpg);
+ }
+ 100%{
+   background-image:	url(../images/banner-1.jpg);
+ }
+}
+

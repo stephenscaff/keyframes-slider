@@ -1,0 +1,35 @@
+/*----------------------------------------------   
+--Banner Bgs
+-----------------------------------------------  */
+@mixin bg-abs{
+	height: 100% !important;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position:	50%;
+	z-index:	0;
+}
+
+/*----------------------------------------------   
+--overlay psedu
+-----------------------------------------------  */
+@mixin overlay($bgColor: #000, $bgOpacity: 0.6){
+	&:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba($bgColor, $bgOpacity);
+	z-index: 0;
+	}
+	
+	.v-center{
+		position:	relative;
+		z-index:	2;
+	}
+}
+

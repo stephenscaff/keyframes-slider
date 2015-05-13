@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<head>
+
+<!-- Title and Meta
+================================================== -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Keyframes Slider 1 | A Stephen Scaff Joint</title>
+<meta name="author" content="Stephen Scaff">
+
+<!-- Mobile Specific Meta
+================================================== -->
+<meta name="viewport" content="width=device-width, initial-scale = 1, maximum-scale=1, user-scalable=no" />
+
+<!-- CSS
+================================================== -->
+<link rel="stylesheet" href="css/app.css">
+
+</head>
+
+<!-- Main
+================================================== -->	
+<main role="main">
+
+<!-- Sect: Banner
+================================================== -->	
+<section class="sect-banner">
+	<!-- Slider animation -->
+	<ul class="kf-slider">
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<div class="v-center">
+		<h1>Stupid Simple Slider</h1>
+		<p>Silky smooth background image silder with css keyframes</p>	
+	</div>
+</section>
+
+<!-- Footer
+================================================== -->	
+<footer>
+	<div class="row">
+		<p>A little thing by <a href="http://twitter.com/stephenscaff" target="_blank">@StephenScaff</a></p>
+	</div>
+</footer>
+
+<!-- Le javascript
+================================================== -->	
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
+<script>
+toggleSlide = function() {
+    var active = $("ul.ani-keys li.active");
+    var next   = active.next();
+    if (next.length === 0) {
+        next = $('ul.ani-keys li:first');
+    }
+    
+    active.removeClass('active');
+    next.addClass('active');
+}
+setInterval(toggleSlide, 5000);
+</script>
+</body>
+</html>

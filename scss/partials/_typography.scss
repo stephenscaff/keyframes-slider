@@ -1,0 +1,84 @@
+/*----------------------------------------------   
+--Google Fonts Import
+-----------------------------------------------  */
+@import url(http://fonts.googleapis.com/css?family=Lato:300|Playfair+Display:900);
+
+/*----------------------------------------------   
+--Typography: Body
+-----------------------------------------------  */
+body {
+  font-family: $font-paragraph;
+  position: relative;
+  width: 100%;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.7;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;  
+}
+
+/*----------------------------------------------   
+--Typography: Fluid body sizing hotness
+* Adjust to suit your needs.
+-----------------------------------------------  */
+body {
+font-size: 100%;
+  
+  @media (min-width: $mq-small) {
+    font-size: 110%
+  }
+  @media (min-width: $mq-med) {
+    font-size: 120%
+  }
+  @media (min-width: $mq-large) {
+    font-size: 130%
+  }
+  @media (min-width: $mq-xlarge) {
+    font-size: 160%
+  }
+  @media (min-width: $mq-xxlarge) {
+    font-size: 170%
+  }
+  @media (min-width: $mq-xxxlarge) {
+    font-size: 180%
+  }
+}
+
+/*----------------------------------------------   
+--Typography: Headers
+-----------------------------------------------  */
+h1{
+	font-size: 2.75em;
+	color:	rgba(255,255,255,0.8);
+	font-family: $font-header;
+	font-weight: 700;
+	text-rendering:optimizeLegibility; 
+	line-height:	1.2;
+
+	@media (min-width: $mq-med) {
+	 font-size:	calc(2.75em + 70%);
+	}    
+}
+
+/*----------------------------------------------   
+--Typography: paragraph
+-----------------------------------------------  */
+p{
+  font-family: $font-paragraph;
+  font-weight:	300;
+}
+
+/*----------------------------------------------   
+--Links
+-----------------------------------------------  */
+a{
+	color:	$color-alpha;
+	@include transition(color 0.7s ease);
+	&:hover{
+		color:	darken($color-alpha, 15);
+		@include transition(color 0.7s ease);
+	}
+}
